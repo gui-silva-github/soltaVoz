@@ -1,0 +1,20 @@
+{
+    "name": "solta_voz/mvc",
+    "description": "Solta a voz e poste com alegria e liberdade",
+    "version": "1.0.0",
+    "require": {
+        "php": ">=7.0"
+    },
+    "authors": [
+        {
+            "name": "Guilherme Silva",
+            "email": "guilhermeviniciusbispodasilva@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\": "App/",
+            "SV\\": "vendor/SV/"
+        }
+    }
+}
