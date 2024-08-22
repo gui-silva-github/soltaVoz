@@ -23,34 +23,35 @@
 
 				</div>
 
-				<div class="perfilPainel">
-					
-					<div class="row mt-2 mb-2">
-						<div class="col mb-2">
-							<span class="perfilPainelNome">Nome do Usuário</span>
-						</div>
-					</div>
-
-					<div class="row mb-2">
-
-						<div class="col">
-							<span class="perfilPainelItem">Tweets</span><br />
-							<span class="perfilPainelItemValor">0</span>
-						</div>
-
-						<div class="col">
-							<span class="perfilPainelItem">Seguindo</span><br />
-							<span class="perfilPainelItemValor">0</span>
-						</div>
-
-						<div class="col">
-							<span class="perfilPainelItem">Seguidores</span><br />
-							<span class="perfilPainelItemValor">0</span>
-						</div>
-
-					</div>
-
+			<div class="perfilPainel">
+							
+			<div class="row mt-2 mb-2">
+				<div class="col mb-2">
+					<span class="perfilPainelNome"><?=$this->view->info_usuario['nome'];?></span>
 				</div>
+			</div>
+
+				<div class="row mb-2">
+
+				<div class="col">
+					<span class="perfilPainelItem">Tweets</span><br />
+					<span class="perfilPainelItemValor"><?=$this->view->total_tweets['total_tweet'];?></span>
+				</div>
+
+				<div class="col">
+					<span class="perfilPainelItem">Seguindo</span><br />
+					<span class="perfilPainelItemValor"><?=$this->view->total_seguindo['total_seguindo'];?></span>
+				</div>
+
+				<div class="col">
+					<span class="perfilPainelItem">Seguidores</span><br />
+					<span class="perfilPainelItemValor"><?=$this->view->total_seguidores['total_seguidores'];?></span>
+				</div>
+
+			</div>
+
+			</div>
+
 			</div>
 
 		</div>
@@ -86,18 +87,22 @@
 										
 											<div class="col-md-6 d-flex justify-content-end">
 												<div>
-													<a href="#" class="btn btn-success">Seguir</a>
-													<a href="#" class="btn btn-danger">Deixar de seguir</a>
+													<?php if($usuario['seguindo_sn'] == 0) { ?>
+														<a href="/acao?acao=seguir&id_usuario=<?=$usuario['id']?>" class="btn btn-success">Seguir</a>
+													<?php } ?>
+													<?php if($usuario['seguindo_sn'] == 1) { ?>
+														<a href="/acao?acao=deixar_de_seguir&id_usuario=<?=$usuario['id']?>" class="btn btn-danger">Deixar de seguir</a>
+													<?php } ?>
 												</div>
 											</div>
 										</div>
-									</div>
+									</div>	
 								</div>
 							</div>
 						</div>
 				<?php } ?>
 			<?php else: ?>
-				<p>Não há usuários com esse nome.</p>
+				
 			<?php endif; ?>
 			
 		</div>

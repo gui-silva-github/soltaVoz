@@ -20,37 +20,38 @@
 
 			<div class="perfil">
 				<div class="perfilTopo">
-
+				
 				</div>
 
 				<div class="perfilPainel">
 					
-					<div class="row mt-2 mb-2">
-						<div class="col mb-2">
-							<span class="perfilPainelNome">Nome do Usuário</span>
-						</div>
+				<div class="row mt-2 mb-2">
+					<div class="col mb-2">
+						<span class="perfilPainelNome"><?=$this->view->info_usuario['nome'];?></span>
 					</div>
+				</div>
 
 					<div class="row mb-2">
 
-						<div class="col">
-							<span class="perfilPainelItem">Tweets</span><br />
-							<span class="perfilPainelItemValor">0</span>
-						</div>
+					<div class="col">
+						<span class="perfilPainelItem">Tweets</span><br />
+						<span class="perfilPainelItemValor"><?=$this->view->total_tweets['total_tweet'];?></span>
+					</div>
 
-						<div class="col">
-							<span class="perfilPainelItem">Seguindo</span><br />
-							<span class="perfilPainelItemValor">0</span>
-						</div>
+					<div class="col">
+						<span class="perfilPainelItem">Seguindo</span><br />
+						<span class="perfilPainelItemValor"><?=$this->view->total_seguindo['total_seguindo'];?></span>
+					</div>
 
-						<div class="col">
-							<span class="perfilPainelItem">Seguidores</span><br />
-							<span class="perfilPainelItemValor">0</span>
-						</div>
-
+					<div class="col">
+						<span class="perfilPainelItem">Seguidores</span><br />
+						<span class="perfilPainelItemValor"><?=$this->view->total_seguidores['total_seguidores'];?></span>
 					</div>
 
 				</div>
+
+			</div>
+
 			</div>
 
 		</div>
@@ -76,12 +77,14 @@
 						<p><strong><?=$tweet['nome'];?></strong> <small><span class="text text-muted">- <?=$tweet['data'];?></span></small></p>
 						<p><?=$tweet['tweet'];?></p>
 
-						<br />
-						<form>
-							<div class="col d-flex justify-content-end">
-								<button type="submit" class="btn btn-danger"><small>Remover</small></button>
-							</div>
-						</form>		
+						<br/>
+						<?php if($tweet['id_usuario'] == $_SESSION['id']) { ?>
+							
+								<div class="col d-flex justify-content-end">
+									<a href="/acao?acao=remover&id_tweet=<?=$tweet['id']?>" class="btn btn-danger"><small>Remover</small></a>
+								</div>
+								
+						<?php } ?>	
 					</div>
 				</div>
 			
