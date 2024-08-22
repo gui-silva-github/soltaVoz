@@ -20,7 +20,7 @@
 		</div>
     </div>
 
-    <div class="col-md-6 pt-4 pl-5 pr-5">
+    <div class="col-md-6 pt-4 pl-5 pr-5 soltavoz">
 		<form method="POST" action="/autenticar">
 			<div class="row">
 				<div class="col">
@@ -49,7 +49,7 @@
 				<img src="/img/soltavoz.png" />
 				<h1 class="title">Veja o que está acontecendo no mundo agora</h1>
 
-				<h2 class="mt-5 subtitle">Participe hoje do Solta Voz.</h2>
+				<h2 class="mt-5 subtitle">Participe hoje do <span>Solta Voz</span>.</h2>
 				<a href="/inscreverse" class="btn btn-primary btn-block mb-2">Inscrever-se</a>
 			</div>	
 		</div>
