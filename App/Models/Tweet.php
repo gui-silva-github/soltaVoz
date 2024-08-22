@@ -40,7 +40,12 @@
             FROM tweets as t
             LEFT JOIN usuarios as u ON 
             (t.id_usuario = u.id)
-            WHERE t.id_usuario = :id_usuario
+            WHERE 
+            t.id_usuario = :id_usuario
+            OR
+            t.id_usuario in 
+            (SELECT id_usuario_seguindo from usuarios_seguidores WHERE  
+            id_usuario = :id_usuario)
             ORDER BY 
             t.data DESC
             ";
