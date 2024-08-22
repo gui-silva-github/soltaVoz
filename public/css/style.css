@@ -31,10 +31,21 @@ h2 {
 	background-color: #1da1f2;
 }
 
+.soltavoz{
+    background-image: url(../img/fundo.png);
+    background-size: cover;
+}
+
+.subtitle span{
+    color: #1da1f2;
+    font-size: 3rem;
+}
+
 .title {
 	color: #1da1f2;
 	font-size: 27px;
     line-height: 32px;
+    text-shadow: 5px 5px 5px black; 
 }
 
 .subtitle {
@@ -42,6 +53,7 @@ h2 {
     font-size: 18px;
     line-height: 24px;
     margin: 16px auto;
+    text-shadow: 10px 10px 10px black; 
 }
 
 .form-control {
@@ -108,8 +120,10 @@ h2 {
 }
 
 .perfilTopo {
-    height: 95px;
-    background-color: #1DA1F2
+    height: 150px;
+    background-color: #1DA1F2;
+    background-image: url(../img/fundo.png);
+    background-size: cover;
 }
 
 .perfilPainel {
