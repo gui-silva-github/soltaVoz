@@ -24,7 +24,7 @@
 ## Usos 
 
 - **Sem XAMPP**: Na pasta public -> php -S localhost:8080.
-- **Com XAMPP**: Colocar o arquivo solta_voz tanto no xampp quanto no htdocs. Abrir o navegador e digitar http://localhost/solta_voz.
+- **Com XAMPP**: Colocar a pasta solta_voz tanto no xampp quanto no htdocs. Abrir o navegador e digitar http://localhost/solta_voz.
 
 - **OBS**: Sempre startar o Apache e o MySQL. 
 
