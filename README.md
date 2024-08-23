@@ -21,6 +21,13 @@
 - **MVC**: Padrão de arquitetura para separar as responsabilidades de código.
 - **PSR-4**: Padrão para autoloading de classes, promovendo boas práticas de desenvolvimento.
 
+## Usos 
+
+- **Sem XAMPP**: Na pasta public -> php -S localhost:8080.
+- **Com XAMPP**: Colocar o arquivo solta_voz tanto no xampp quanto no htdocs. Abrir o navegador e digitar http://localhost/solta_voz.
+
+- **OBS**: Sempre startar o Apache e o MySQL. 
+
 ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 ![Apache](https://img.shields.io/badge/apache-%23D42029.svg?style=for-the-badge&logo=apache&logoColor=white)
 ![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white)
