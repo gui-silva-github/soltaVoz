@@ -90,6 +90,22 @@
 			
 			<?php } ?>
 
+			<nav aria-label="Page navigation example">
+				<ul class="pagination">
+					<li class="page-item"><a class="page-link" href="?pagina=1">Primeira</a></li>
+					
+					<?php for($i = 1; $i <= $this->view->total_de_paginas; $i++){ ?>
+						
+						<li class="page-item <?=$this->view->pagina_ativa == $i ? 'active' : ''?>">
+							<a class="page-link" href="?pagina=<?=$i?>"><?=$i?></a>
+						</li>
+
+					<?php } ?>
+
+					<li class="page-item"><a class="page-link" href="?pagina=<?=$this->view->total_de_paginas?>">Última</a></li>
+				</ul>
+			</nav>
+
 		</div>
 
 
